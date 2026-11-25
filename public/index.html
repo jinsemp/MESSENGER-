@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101713"><meta name="description" content="Private peer-to-peer messaging. Your chat history stays on your device.">
+  <title>Stranger Chat — private conversations</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main id="authView" class="auth-shell">
+    <section class="brand-panel"><div class="brand-mark">S<span>·</span></div><p class="eyebrow">A quieter kind of messaging</p><h1>Your conversations.<br><em>Your devices.</em></h1><p class="muted">Connect directly. Keep your chat history on your own browser. No server-side message archive.</p><div class="privacy-note"><span class="pulse"></span> Peer-to-peer by design</div></section>
+    <section class="auth-card"><div class="mobile-brand">S<span>·</span> STRANGER CHAT</div><div class="tabs"><button class="tab active" data-mode="login">Sign in</button><button class="tab" data-mode="register">Create account</button></div><h2 id="authTitle">Welcome back</h2><p id="authSubtitle" class="muted">Sign in to pick up where you left off.</p>
+      <form id="authForm"><label>Email address<input id="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254"></label><label>Password<input id="password" type="password" autocomplete="current-password" placeholder="At least 10 characters" required minlength="10" maxlength="128"></label><button class="primary wide" id="authSubmit">Sign in <span>↗</span></button><p id="authError" class="error" role="alert"></p></form><p class="fine-print">Your password is securely hashed. Messages are not uploaded to our servers.</p>
+    </section>
+  </main>
+  <main id="appView" class="app-shell hidden">
+    <aside class="sidebar"><header class="side-header"><div class="brand-inline"><div class="brand-mark small">S<span>·</span></div><div><b>stranger chat</b><small>private by design</small></div></div><button id="logoutBtn" class="icon-btn" title="Sign out">↗</button></header>
+      <div class="profile-strip"><div class="avatar self-avatar">Y</div><div class="profile-meta"><b id="myEmail">You</b><small><i class="online-dot"></i> Online</small></div></div>
+      <div class="section-label">START A CONVERSATION</div><form id="searchForm" class="search-form"><input id="searchEmail" type="email" placeholder="Find someone by email" required><button class="search-btn" aria-label="Search">＋</button></form><p id="searchMessage" class="search-message"></p>
+      <div class="section-label chats-label">YOUR CHATS <span id="chatCount">0</span></div><div id="chatList" class="chat-list"><div class="empty-chats">No conversations yet.<br>Find someone by email to begin.</div></div>
+      <footer class="side-footer"><span class="lock-icon">⌑</span> Messages live on this device</footer>
+    </aside>
+    <section class="conversation" id="conversationView"><div class="welcome-state"><div class="welcome-orbit"><span>✳</span></div><p class="eyebrow">WELCOME TO STRANGER CHAT</p><h2>Good conversations<br>start with a hello.</h2><p class="muted">Search for someone by email to start a private, direct conversation.</p><div class="welcome-foot"><span>⌑</span> No cloud message history. Ever.</div></div></section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body></html>
